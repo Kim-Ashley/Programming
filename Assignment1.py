@@ -3,7 +3,8 @@
 def built_in_functions_max(num1, num2, num3):
     # TODO: Implement this function
     
-    numbers = [num1, num3, num3]
+    #List of numbers
+    numbers = [num1, num2, num3]
     maximum = max(numbers)
     return maximum
 
@@ -14,12 +15,14 @@ num3 = float(input('Enter third number: '))
 #Printing maximum number among 3 numbers
 print('The maximum number is:', built_in_functions_max(num1, num2, num3))
 
+
 # Function 2: Using Python built-in functions
 # This function should take three numbers as input and return their min.
 def built_in_functions_min(num1, num2, num3):
     # TODO: Implement this function
     
-    numbers = [num1, num2, num3] #list of numbers
+    #List of numbers
+    numbers = [num1, num2, num3]
     minimum = min(numbers)
     return minimum
 
@@ -35,13 +38,14 @@ print('The minimum number is: ', built_in_functions_min(num1, num2, num3))
 # This function should check if a number is positive, negative, or zero and return the corresponding message.
 def check_number(number):
     # TODO: Implement this function
+    
+    # Check if the number is positive, negative or zero
     if number > 0:
         return "The number is positive."
     elif number < 0:
         return "The number is negative."
     else:
         return "The number is zero."
-    
 
 #Taking a number as input from user
 number = float(input('Enter a number: '))
@@ -54,10 +58,12 @@ def star_shape(rows):
     # TODO: Implement this function
     star = "*"
     for i in range(rows):
-        print(star * (i + 1))
-    pass  # Replace with your code
+        print(star * (i + 1)) # Print star shape
+    return star
+
+#Asking the number of rows for star shape
 rows = int(input("Enter number of rows: "))
-star_shape(rows)
+star_shape(rows) #Calling the function to print star shape
 
 # Function 5: While Loop – Counting Multiples of 3
 # This function should return a list of numbers from 1 to limit, replacing multiples of 3 with "Multiple of 3".
@@ -65,26 +71,29 @@ def count_multiples_of_3(limit):
     # TODO: Implement this function
     count = 1
     while count <= limit:
-        if count % 3 == 0:
+        if count % 3 == 0: # Check if the number is a multiple of 3
             print("Multiple of 3")
         else:
             print(count)
         count += 1
     return limit
 
+#Taking a positive integer as input from user
 limit = int(input("Enter a positive integer: "))
-print(count_multiples_of_3(limit))
+count_multiples_of_3(limit)
 
 # Function 6: Sum of Even Numbers in a Range
 # This function should calculate and return the sum of even numbers within a given range.
 def sum_of_even_numbers(start, end):
     # TODO: Implement this function
-    total = 0 
+    
+    total = 0     # Initialize total to 0
     for num in range(start, end + 1):
-        if num % 2 == 0:
+        if num % 2 == 0: # Check if the number is even
             total += num
     return total
 
+#Inputs for range
 start = int(input('Enter the start of the range: '))
 end = int(input('Enter the end of the range: '))
 print('The sum of even numbers in the range is:', sum_of_even_numbers(start, end))
